@@ -34,7 +34,8 @@ export default function EmployeesPage() {
 
   const fetchEmployees = async () => {
     try {
-      const res = await fetch("http://localhost:3001/api/v1/employees");
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001";
+      const res = await fetch(`${apiUrl}/api/v1/employees`);
       const data = await res.json();
       setEmployees(data);
     } catch (error) {

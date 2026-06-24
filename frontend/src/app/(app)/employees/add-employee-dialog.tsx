@@ -40,7 +40,8 @@ export function AddEmployeeDialog({ onEmployeeAdded }: { onEmployeeAdded?: () =>
     };
 
     try {
-      await fetch("http://localhost:3001/api/v1/employees", {
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001";
+      await fetch(`${apiUrl}/api/v1/employees`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
