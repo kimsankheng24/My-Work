@@ -4,7 +4,6 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { useTranslation } from "react-i18next";
 import {
   Dialog,
   DialogContent,
@@ -17,7 +16,6 @@ import {
 import { Plus } from "lucide-react";
 
 export function AddEmployeeDialog({ onEmployeeAdded }: { onEmployeeAdded?: () => void }) {
-  const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -68,7 +66,7 @@ export function AddEmployeeDialog({ onEmployeeAdded }: { onEmployeeAdded?: () =>
           <DialogHeader>
             <DialogTitle>Add New Employee</DialogTitle>
             <DialogDescription>
-              Enter the employee details below. Click save when you're done.
+              Enter the employee details below. Click save when you&apos;re done.
             </DialogDescription>
           </DialogHeader>
           <div className="grid gap-4 py-4">

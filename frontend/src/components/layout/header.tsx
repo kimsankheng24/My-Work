@@ -4,7 +4,6 @@ import * as React from "react";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "next-themes";
 import { Menu, Sun, Moon, Languages, User, LogOut } from "lucide-react";
-import { cn } from "@/lib/utils";
 
 export function Header({ onMenuClick }: { onMenuClick?: () => void }) {
   const { t, i18n } = useTranslation();

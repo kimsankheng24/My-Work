@@ -64,7 +64,7 @@ export default function EmployeesPage() {
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
         <div>
           <h1 className="text-2xl font-bold tracking-tight">{t("common.employee_management")}</h1>
-          <p className="text-muted-foreground">Manage your organization's workforce, departments, and roles.</p>
+          <p className="text-muted-foreground">Manage your organization&apos;s workforce, departments, and roles.</p>
         </div>
         <AddEmployeeDialog onEmployeeAdded={fetchEmployees} />
       </div>
